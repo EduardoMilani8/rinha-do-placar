@@ -1,0 +1,59 @@
+{
+  "nome": "Empate total desempata pelo id da equipe",
+  "descricao": "eq-z e eq-m empatam em tudo; vem primeiro o menor id em ordem alfabética. eq-a não resolveu nada e fica por último.",
+  "equipes": [
+    {
+      "id": "eq-z",
+      "nome": "Equipe Z"
+    },
+    {
+      "id": "eq-m",
+      "nome": "Equipe M"
+    },
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-z",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s2",
+      "equipe_id": "eq-m",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-m",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-z",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    },
+    {
+      "posicao": 3,
+      "equipe_id": "eq-a",
+      "resolvidos": 0,
+      "penalidade": 0,
+      "ultimo_acerto": null
+    }
+  ]
+}

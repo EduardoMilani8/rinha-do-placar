@@ -1,0 +1,40 @@
+{
+  "nome": "Acerto simples",
+  "descricao": "Uma equipe acerta um problema no minuto 10; a outra não envia nada.",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-b",
+      "resolvidos": 0,
+      "penalidade": 0,
+      "ultimo_acerto": null
+    }
+  ]
+}

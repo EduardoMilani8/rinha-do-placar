@@ -1,0 +1,64 @@
+{
+  "nome": "Desempate pelo último acerto",
+  "descricao": "Ambas resolvem 2 problemas com 60 min de penalidade. eq-b fez o último acerto no minuto 30, eq-a no 50: eq-b vence.",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s2",
+      "equipe_id": "eq-a",
+      "problema": "B",
+      "minuto": 50,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s3",
+      "equipe_id": "eq-b",
+      "problema": "A",
+      "minuto": 30,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s4",
+      "equipe_id": "eq-b",
+      "problema": "B",
+      "minuto": 30,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-b",
+      "resolvidos": 2,
+      "penalidade": 60,
+      "ultimo_acerto": 30
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-a",
+      "resolvidos": 2,
+      "penalidade": 60,
+      "ultimo_acerto": 50
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "nome": "Validação e códigos de erro",
+  "descricao": "Entradas inválidas devolvem 422, ids desconhecidos 404 e equipe repetida 409.",
+  "equipes": [],
+  "passos": [
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/equipes",
+      "corpo": {
+        "id": "eq-a",
+        "nome": "Equipe A"
+      },
+      "esperar_status": 201
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/equipes",
+      "corpo": {
+        "id": "eq-a",
+        "nome": "Outro nome"
+      },
+      "esperar_status": 409
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/equipes",
+      "corpo": {
+        "id": "",
+        "nome": "Sem id"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/equipes",
+      "corpo": {
+        "id": "eq-x"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "nao-existe",
+        "problema": "A",
+        "minuto": 1,
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 404
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "a",
+        "minuto": 1,
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": -1,
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": 301,
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": 10.5,
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": "10",
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": 10,
+        "veredito": "TALVEZ"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "POST",
+      "caminho": "/submissoes",
+      "corpo": {
+        "id": "s1",
+        "equipe_id": "eq-a",
+        "problema": "A",
+        "minuto": 10,
+        "veredito": "ERRADO"
+      },
+      "esperar_status": 201
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "PATCH",
+      "caminho": "/submissoes/s1",
+      "corpo": {
+        "veredito": "TALVEZ"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "PATCH",
+      "caminho": "/submissoes/nao-existe",
+      "corpo": {
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 404
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "PATCH",
+      "caminho": "/submissoes/s1",
+      "corpo": {
+        "veredito": "ACEITO"
+      },
+      "esperar_status": 200
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "GET",
+      "caminho": "/equipes/nao-existe",
+      "corpo": null,
+      "esperar_status": 404
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "GET",
+      "caminho": "/equipes/eq-a",
+      "corpo": null,
+      "esperar_status": 200
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    }
+  ]
+}

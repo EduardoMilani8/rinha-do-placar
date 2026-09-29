@@ -1,0 +1,38 @@
+name: Inscrição
+description: Inscreva sua equipe na Rinha do Placar.
+title: "[Inscrição] Nome da equipe"
+labels: ["inscricao"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de se inscrever, leia o [edital](../blob/main/EDITAL.md).
+        Esta Issue é **pública**: não informe telefone, documentos, endereço ou outros dados pessoais sensíveis.
+  - type: input
+    id: equipe
+    attributes:
+      label: Nome da equipe
+    validations:
+      required: true
+  - type: textarea
+    id: integrantes
+    attributes:
+      label: Integrantes
+      description: Usuário do GitHub de cada integrante, um por linha (de 1 a 3 pessoas).
+      placeholder: "@usuario1\n@usuario2"
+    validations:
+      required: true
+  - type: input
+    id: tecnologias
+    attributes:
+      label: Tecnologias previstas (opcional)
+      description: Linguagem, framework, banco de dados.
+  - type: checkboxes
+    id: aceite
+    attributes:
+      label: Confirmações
+      options:
+        - label: Li o edital e aceito as regras.
+          required: true
+        - label: Nenhum integrante faz parte de outra equipe.
+          required: true

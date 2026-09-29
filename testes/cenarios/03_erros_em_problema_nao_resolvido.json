@@ -1,0 +1,92 @@
+{
+  "nome": "Erros em problema não resolvido não contam",
+  "descricao": "eq-a erra o problema A três vezes e nunca acerta, mas resolve o B no minuto 40. A penalidade é só 40.",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 5,
+      "veredito": "ERRADO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s2",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 6,
+      "veredito": "ERRADO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s3",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 7,
+      "veredito": "ERRADO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s4",
+      "equipe_id": "eq-a",
+      "problema": "B",
+      "minuto": 40,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s5",
+      "equipe_id": "eq-b",
+      "problema": "B",
+      "minuto": 50,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 40,
+      "ultimo_acerto": 40
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-b",
+      "resolvidos": 1,
+      "penalidade": 50,
+      "ultimo_acerto": 50
+    }
+  ],
+  "detalhes": {
+    "eq-a": {
+      "problemas": [
+        {
+          "problema": "A",
+          "resolvido": false,
+          "tentativas_erradas": 3,
+          "minuto_acerto": null,
+          "penalidade": 0
+        },
+        {
+          "problema": "B",
+          "resolvido": true,
+          "tentativas_erradas": 0,
+          "minuto_acerto": 40,
+          "penalidade": 40
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "nome": "Concorrência: mesma equipe, mesmo problema",
+  "descricao": "22 submissões de eq-a no problema A chegam ao mesmo tempo. 20 erros antes do acerto: 21 + 20*20 = 421. Contadores sem controle de concorrência perdem tentativas.",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "paralelo",
+      "passos": [
+        {
+          "tipo": "submissao",
+          "id": "s01",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 1,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s02",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 2,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s03",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 3,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s04",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 4,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s05",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 5,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s06",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 6,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s07",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 7,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s08",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 8,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s09",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 9,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s10",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 10,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s11",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 11,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s12",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 12,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s13",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 13,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s14",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 14,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s15",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 15,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s16",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 16,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s17",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 17,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s18",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 18,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s19",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 19,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s20",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 20,
+          "veredito": "ERRADO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s21",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 21,
+          "veredito": "ACEITO"
+        },
+        {
+          "tipo": "submissao",
+          "id": "s22",
+          "equipe_id": "eq-a",
+          "problema": "A",
+          "minuto": 22,
+          "veredito": "ACEITO"
+        }
+      ]
+    },
+    {
+      "tipo": "submissao",
+      "id": "s90",
+      "equipe_id": "eq-b",
+      "problema": "A",
+      "minuto": 5,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-b",
+      "resolvidos": 1,
+      "penalidade": 5,
+      "ultimo_acerto": 5
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 421,
+      "ultimo_acerto": 21
+    }
+  ],
+  "detalhes": {
+    "eq-a": {
+      "problemas": [
+        {
+          "problema": "A",
+          "resolvido": true,
+          "tentativas_erradas": 20,
+          "minuto_acerto": 21,
+          "penalidade": 421
+        }
+      ]
+    }
+  }
+}

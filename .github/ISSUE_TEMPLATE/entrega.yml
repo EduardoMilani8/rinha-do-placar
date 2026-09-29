@@ -1,0 +1,52 @@
+name: Entrega
+description: Entregue a solução da sua equipe.
+title: "[Entrega] Nome da equipe"
+labels: ["entrega"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vale a **última** Issue de entrega aberta antes do prazo (veja o cronograma no [edital](../blob/main/EDITAL.md)).
+  - type: input
+    id: equipe
+    attributes:
+      label: Nome da equipe
+      description: O mesmo da inscrição.
+    validations:
+      required: true
+  - type: input
+    id: repositorio
+    attributes:
+      label: Link do repositório (público)
+      placeholder: https://github.com/usuario/repositorio
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Hash do commit avaliado
+      description: "Rode `git rev-parse HEAD` para descobrir."
+    validations:
+      required: true
+  - type: textarea
+    id: tecnologias
+    attributes:
+      label: Tecnologias usadas
+      description: Linguagem, framework, banco de dados e o que mais for relevante.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: O repositório é público e o `docker-compose.yml` está na raiz.
+          required: true
+        - label: Existem exatamente duas instâncias da API (`api01` e `api02`) e o balanceador escuta na porta 9999.
+          required: true
+        - label: A soma dos limites declarados não passa de 1,5 CPU e 3 GB.
+          required: true
+        - label: Rodei `python3 testes/executar.py corretude` e todos os cenários passaram.
+          required: true
+        - label: Rodei `python3 testes/executar.py carga` e o resultado foi APROVADO.
+          required: true

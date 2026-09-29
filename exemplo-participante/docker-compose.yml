@@ -1,0 +1,54 @@
+# Modelo de docker-compose.yml para a Rinha do Placar.
+# Copie para a RAIZ do seu repositório e adapte (banco, imagens, variáveis).
+#
+# Regras que este arquivo já cumpre (veja docs/REQUISITOS-TECNICOS.md):
+#   - o balanceador escuta na porta 9999;
+#   - existem exatamente duas instâncias da API, chamadas api01 e api02;
+#   - a soma dos limites é 1,5 CPU e 3 GB de memória (3000MB).
+#
+# ATENÇÃO: este modelo não traz uma API pronta. A pasta ./api com o seu
+# Dockerfile é por sua conta.
+
+services:
+  lb:
+    image: nginx:1.27-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "9999:9999"
+    depends_on:
+      - api01
+      - api02
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "50MB"
+
+  api01: &api
+    build: ./api
+    environment:
+      PORT: "8080"
+      DATABASE_URL: "postgres://placar:placar@db:5432/placar"
+    depends_on:
+      - db
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "500MB"
+
+  api02:
+    <<: *api
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: placar
+      POSTGRES_PASSWORD: placar
+      POSTGRES_DB: placar
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "1950MB"

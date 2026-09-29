@@ -1,0 +1,77 @@
+{
+  "nome": "Submissões depois do acerto são ignoradas",
+  "descricao": "Depois do ACEITO no minuto 10, nem o ERRADO nem o segundo ACEITO alteram nada.",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s2",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 20,
+      "veredito": "ERRADO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s3",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 30,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s4",
+      "equipe_id": "eq-b",
+      "problema": "A",
+      "minuto": 15,
+      "veredito": "ACEITO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-b",
+      "resolvidos": 1,
+      "penalidade": 15,
+      "ultimo_acerto": 15
+    }
+  ],
+  "detalhes": {
+    "eq-a": {
+      "problemas": [
+        {
+          "problema": "A",
+          "resolvido": true,
+          "tentativas_erradas": 0,
+          "minuto_acerto": 10,
+          "penalidade": 10
+        }
+      ]
+    }
+  }
+}

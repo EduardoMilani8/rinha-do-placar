@@ -1,0 +1,17 @@
+name: Dúvida
+description: Tire uma dúvida, aponte um erro nos testes ou na especificação, ou abra um recurso.
+title: "[Dúvida] "
+labels: ["duvida"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Olhe antes o [FAQ](../blob/main/docs/FAQ.md). As respostas ficam públicas para todas as equipes terem a mesma informação.
+        Para abrir um **recurso**, comece o título com `[RECURSO]`.
+  - type: textarea
+    id: pergunta
+    attributes:
+      label: Qual é a sua dúvida?
+      description: Se for um erro nos testes ou na especificação, diga o que esperava e o que aconteceu.
+    validations:
+      required: true

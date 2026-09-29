@@ -1,0 +1,7 @@
+{
+  "nome": "Placar vazio",
+  "descricao": "Sem equipes cadastradas, o placar é uma lista vazia.",
+  "equipes": [],
+  "passos": [],
+  "placar": []
+}

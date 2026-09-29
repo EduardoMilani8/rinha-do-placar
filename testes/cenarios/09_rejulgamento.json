@@ -1,0 +1,95 @@
+{
+  "nome": "Rejulgamento recalcula a equipe",
+  "descricao": "eq-a: ERRADO(10) vira ACEITO, então o acerto passa a ser no minuto 10 e o antigo ACEITO(20) é ignorado (penalidade 40 -> 10). eq-b: ACEITO(5) do problema B vira ERRADO, então o ACEITO(50) volta a valer, com 1 erro antes (penalidade 5 -> 70).",
+  "equipes": [
+    {
+      "id": "eq-a",
+      "nome": "Equipe A"
+    },
+    {
+      "id": "eq-b",
+      "nome": "Equipe B"
+    }
+  ],
+  "passos": [
+    {
+      "tipo": "submissao",
+      "id": "s1",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 10,
+      "veredito": "ERRADO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s2",
+      "equipe_id": "eq-a",
+      "problema": "A",
+      "minuto": 20,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s3",
+      "equipe_id": "eq-b",
+      "problema": "A",
+      "minuto": 30,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s4",
+      "equipe_id": "eq-b",
+      "problema": "B",
+      "minuto": 5,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "submissao",
+      "id": "s5",
+      "equipe_id": "eq-b",
+      "problema": "B",
+      "minuto": 50,
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "rejulgar",
+      "id": "s1",
+      "veredito": "ACEITO"
+    },
+    {
+      "tipo": "rejulgar",
+      "id": "s4",
+      "veredito": "ERRADO"
+    }
+  ],
+  "placar": [
+    {
+      "posicao": 1,
+      "equipe_id": "eq-b",
+      "resolvidos": 2,
+      "penalidade": 100,
+      "ultimo_acerto": 50
+    },
+    {
+      "posicao": 2,
+      "equipe_id": "eq-a",
+      "resolvidos": 1,
+      "penalidade": 10,
+      "ultimo_acerto": 10
+    }
+  ],
+  "detalhes": {
+    "eq-a": {
+      "problemas": [
+        {
+          "problema": "A",
+          "resolvido": true,
+          "tentativas_erradas": 0,
+          "minuto_acerto": 10,
+          "penalidade": 10
+        }
+      ]
+    }
+  }
+}
