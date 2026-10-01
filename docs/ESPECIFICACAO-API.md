@@ -71,6 +71,8 @@ Ordem de verificação: primeiro a validação do corpo (`422`), depois o `id` r
 | `404` | A submissão não existe |
 | `422` | `veredito` ausente ou inválido |
 
+Ordem de verificação, a mesma do `POST /submissoes`: primeiro a validação do corpo (`422`), depois a existência da submissão (`404`). Portanto, um `veredito` inválido em uma submissão que não existe devolve `422`.
+
 ## `GET /placar`
 
 Devolve **200** com uma lista de todas as equipes, já ordenada conforme a [regra de ranking](REGRA-DE-RANKING.md):

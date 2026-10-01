@@ -1,6 +1,6 @@
 {
   "nome": "Validação e códigos de erro",
-  "descricao": "Entradas inválidas devolvem 422, ids desconhecidos 404 e equipe repetida 409.",
+  "descricao": "Entradas inválidas devolvem 422, ids desconhecidos 404 e equipe repetida 409. Quando o corpo é inválido e o id não existe, vale o 422 (o corpo é validado primeiro).",
   "equipes": [],
   "passos": [
     {
@@ -150,6 +150,15 @@
       "tipo": "requisicao",
       "metodo": "PATCH",
       "caminho": "/submissoes/s1",
+      "corpo": {
+        "veredito": "TALVEZ"
+      },
+      "esperar_status": 422
+    },
+    {
+      "tipo": "requisicao",
+      "metodo": "PATCH",
+      "caminho": "/submissoes/nao-existe",
       "corpo": {
         "veredito": "TALVEZ"
       },
