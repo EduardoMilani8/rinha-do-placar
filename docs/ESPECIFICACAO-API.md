@@ -2,8 +2,6 @@
 
 A API atende na **porta 9999** (o balanceador), fala **JSON** e usa HTTP/1.1. Campos desconhecidos nos corpos das requisições são ignorados. O corpo das respostas de sucesso de escrita é livre, e os testes só olham o **status**.
 
-Para ver o comportamento esperado na prática, suba o [servidor ingênuo](../testes/servidor_ingenuo.py) e faça requisições nele.
-
 ## Resumo
 
 | Método | Rota | Função |

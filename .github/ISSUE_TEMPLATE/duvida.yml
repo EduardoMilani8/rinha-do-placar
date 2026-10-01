@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Olhe antes o [FAQ](../blob/main/docs/FAQ.md). As respostas ficam públicas para todas as equipes terem a mesma informação.
+        As respostas ficam públicas para todas as equipes terem a mesma informação.
         Para abrir um **recurso**, comece o título com `[RECURSO]`.
   - type: textarea
     id: pergunta

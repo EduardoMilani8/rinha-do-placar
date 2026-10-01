@@ -8,7 +8,6 @@ Tudo aqui usa apenas a biblioteca padrão do **Python 3.10 ou mais novo**. Não 
 | `oraculo.py` | A regra de ranking implementada de forma simples e correta |
 | `gerador.py` | Gera a competição simulada da carga a partir de uma semente |
 | `cenarios/` | Os 12 cenários de corretude, com resultados calculados à mão |
-| `servidor_ingenuo.py` | Uma API mínima em memória, para ver o comportamento esperado |
 | `test_oraculo.py` | Confere o oráculo contra os cenários |
 
 ## Rodar contra a sua solução
@@ -34,14 +33,12 @@ A semente padrão (42) é pública. A avaliação oficial usa uma semente secret
 
 O código de saída é `0` se tudo passou e `1` se algo falhou. Se o executor não conseguir falar com a API, ele sai com `2`.
 
-## Testar o próprio ambiente com o servidor ingênuo
+## Antes de entregar
 
-```bash
-python3 testes/servidor_ingenuo.py --porta 9999   # em um terminal
-python3 testes/executar.py corretude              # em outro
-```
-
-O servidor ingênuo passa em tudo, mas **não serve como solução**: ele guarda os dados na memória de um único processo, então não funciona com duas instâncias.
+1. Suba a solução: `docker compose up --build`.
+2. `python3 testes/executar.py corretude`: todos os cenários devem passar.
+3. `python3 testes/executar.py carga`: com a semente pública 42, o resultado deve ser `APROVADO`.
+4. Simule a etapa de falha: rode a carga com `--limite-erros 0.05` e, no meio dela, derrube uma instância com `docker compose kill api02`. A solução precisa continuar respondendo e o placar final precisa continuar correto.
 
 ## Ver os dados gerados
 

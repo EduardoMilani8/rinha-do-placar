@@ -1,8 +1,7 @@
 """Oráculo da Rinha do Placar: a implementação de referência da regra de ranking.
 
 Este módulo é a fonte da verdade sobre como o placar deve ser calculado.
-Ele é usado pelo gerador de dados, pelo executor de testes e pelo servidor
-ingênuo. Se a especificação (docs/REGRA-DE-RANKING.md) e este arquivo
+Ele é usado pelo gerador de dados e pelo executor de testes. Se a especificação (docs/REGRA-DE-RANKING.md) e este arquivo
 divergirem, é um bug: abra uma Issue.
 """
 
