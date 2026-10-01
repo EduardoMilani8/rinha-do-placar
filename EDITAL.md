@@ -4,7 +4,7 @@
 
 ## 1. Apresentação
 
-A **Rinha do Placar** é uma competição de back-end aberta que integra o **Esquenta**, evento de abertura da Maratona de Programação do ano que vem, marcado para **27 de outubro de 2026**, às 8h.
+A **Rinha do Placar** é uma competição de back-end aberta que integra o **Esquenta**, evento de abertura marcado para **27 de outubro de 2026**, às 8h.
 
 Todas as equipes implementam a mesma API: o **placar de uma maratona de programação** no estilo ICPC. Uma competição simulada envia submissões em rajada enquanto várias pessoas consultam o ranking, e a API precisa manter o placar **correto** e **rápido**. Os resultados são apresentados ao vivo na abertura do Esquenta.
 
@@ -45,7 +45,7 @@ Como as Issues são públicas, **não informe dados pessoais sensíveis** (telef
 
 ## 6. O desafio
 
-Cada equipe deve implementar a API descrita em [`docs/ESPECIFICACAO-API.md`](docs/ESPECIFICACAO-API.md), seguindo exatamente a regra de ranking de [`docs/REGRA-DE-RANKING.md`](docs/REGRA-DE-RANKING.md).
+Cada equipe deve implementar a API descrita em [`docs/ESPECIFICACAO-API.md`](docs/ESPECIFICACAO-API.md), seguindo exatamente a regra de ranking de [`docs/REGRA-DE-RANKING.md`](docs/REGRA-DE-RANKING.md). Os documentos da pasta `docs/` e os testes da pasta `testes/` fazem parte deste edital.
 
 Em resumo, a API:
 
@@ -56,32 +56,20 @@ Em resumo, a API:
 
 ## 7. Requisitos técnicos
 
-Os requisitos completos estão em [`docs/REQUISITOS-TECNICOS.md`](docs/REQUISITOS-TECNICOS.md). Os principais:
-
-- **Linguagem, framework e banco de dados livres.**
-- Entrega em um repositório **público** com um `docker-compose.yml` na raiz.
-- **Duas instâncias da API** (`api01` e `api02`) atrás de um balanceador na **porta 9999**.
-- Limite total de **1,5 CPU e 3 GB de memória** somando todos os serviços.
-- O estado tem de ser compartilhado entre as instâncias.
+Linguagem, framework e banco de dados são livres. A solução é entregue como um `docker-compose.yml` com duas instâncias da API atrás de um balanceador, dentro de um limite de recursos. Todos os requisitos estão em [`docs/REQUISITOS-TECNICOS.md`](docs/REQUISITOS-TECNICOS.md).
 
 ## 8. Avaliação
 
-A avaliação é automática e reproduzível, e está detalhada em [`docs/AVALIACAO.md`](docs/AVALIACAO.md). Em resumo, cada solução passa por quatro etapas:
+A avaliação é automática e reproduzível, feita pelos mesmos testes públicos de [`testes/`](testes). As etapas e os critérios estão em [`docs/AVALIACAO.md`](docs/AVALIACAO.md). Só quem passa em todas as etapas entra no ranking, ordenado pela **latência p99** (menor é melhor). Assim, não vence quem é rápido, mas errado.
 
-1. **Subida:** o ambiente sobe e responde em até 60 segundos.
-2. **Corretude (eliminatória):** os cenários públicos de [`testes/cenarios/`](testes/cenarios).
-3. **Carga:** uma rajada de submissões com leituras simultâneas do placar, gerada por uma **semente secreta**, com conferência do placar final.
-4. **Falha:** uma instância da API é derrubada no meio da carga.
-
-Só quem passa em todas as etapas entra no ranking, que é ordenado pela **latência p99** (menor é melhor). Assim, não vence quem é rápido, mas errado.
-
-Os testes são públicos. Rode-os na sua máquina antes de entregar, usando as instruções em [`testes/README.md`](testes/README.md).
+Rode os testes na sua máquina antes de entregar, seguindo [`testes/README.md`](testes/README.md).
 
 ## 9. Entrega
 
 1. Deixe a solução em um repositório **público**.
 2. Abra uma Issue com o modelo **Entrega**, informando o link do repositório e o **hash do commit** avaliado.
 3. Vale a **última** Issue de entrega aberta pela equipe até o prazo. Commits feitos depois do prazo, ou fora do hash informado, não são considerados.
+4. **Não há segunda chance.** A solução reprovada em qualquer etapa da avaliação fica fora do ranking e não pode ser corrigida ou reenviada depois do prazo. Teste bastante antes de entregar.
 
 ## 10. Premiação
 

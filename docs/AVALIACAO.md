@@ -9,7 +9,7 @@ Subida  →  Corretude  →  Carga (3 execuções)  →  Falha  →  Ranking
    └─────────── qualquer reprovação elimina a solução ───────────┘
 ```
 
-Só entram no ranking as soluções **aprovadas em todas as etapas**. Quem for reprovado recebe o motivo em uma Issue, para poder aprender com ele.
+Só entram no ranking as soluções **aprovadas em todas as etapas**. Quem for reprovado recebe o motivo em uma Issue, para poder aprender com ele, mas não há nova entrega (veja o [edital](../EDITAL.md#9-entrega)).
 
 ## Etapa 1: subida
 
@@ -85,7 +85,4 @@ O p99 global considera todas as requisições da carga: envios, rejulgamentos e 
 
 ## Rode antes de entregar
 
-1. Suba a sua solução: `docker compose up --build`.
-2. `python3 testes/executar.py corretude`. Todos os cenários devem passar.
-3. `python3 testes/executar.py carga`. Com a semente pública 42, o resultado deve ser `APROVADO`.
-4. Derrube uma instância durante a carga e veja se ela continua atendendo: `docker compose kill api02`.
+O passo a passo para rodar cada etapa na sua máquina, inclusive a derrubada de uma instância, está em [`testes/README.md`](../testes/README.md).
