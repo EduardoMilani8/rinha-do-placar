@@ -75,25 +75,38 @@ Rode os testes na sua máquina antes de entregar, seguindo [`testes/README.md`](
 
 A premiação será divulgada por aviso neste repositório **antes do fim das inscrições**. O ranking final será publicado no arquivo `RESULTADOS.md`.
 
-## 11. Conduta e desclassificação
+## 11. Uso de inteligência artificial
+
+O uso de ferramentas de IA (assistentes de código, chats, geradores) é **permitido**. Não vamos proibir, e nem teríamos como fiscalizar.
+
+Mesmo assim, pedimos bom senso. A Rinha existe para você **se desafiar e aprender algo novo**: concorrência, consistência, cache, desempenho sob carga. Entregar o que uma IA gerou sem entender, só para subir no ranking, tira de você justamente o que a competição oferece, e o resultado final não vai dizer nada sobre o que você sabe.
+
+Nossa sugestão: use a IA como quem usa um colega mais experiente ou a documentação, para tirar dúvidas, entender um erro, comparar abordagens e revisar o que escreveu. Tente resolver as partes principais por conta própria, e a IA vira um apoio, não o autor da solução.
+
+Em troca, combinamos três coisas:
+
+1. A equipe precisa **entender e saber explicar** o que entregou. A organização pode pedir uma explicação a qualquer momento, e a incapacidade de explicar a própria solução pode levar à desclassificação (veja a seção 12).
+2. Conte no `README.md` da solução, em poucas linhas, **como a IA foi usada**, se foi. Isso não tira pontos e não afeta o ranking: serve para a troca de aprendizados entre as equipes.
+3. Usar IA não muda as demais regras: copiar a solução de outra equipe continua proibido, e tentar enganar o executor dos testes também.
+
+## 12. Conduta e desclassificação
 
 Uma equipe pode ser desclassificada se:
 
 - copiar código de outra equipe (é permitido usar bibliotecas e trechos públicos, citando a fonte no repositório);
 - tentar **identificar o executor dos testes** ou os dados da carga para dar respostas pré-calculadas (por exemplo, reconhecer o cabeçalho das requisições ou a semente pública);
 - tentar prejudicar a máquina de avaliação, as outras equipes ou a organização;
-- entregar uma solução que não use os serviços do `docker-compose.yml` como descrito nos requisitos.
-
-O uso de ferramentas de IA é **permitido**, desde que a equipe entenda a solução e consiga explicá-la quando a organização pedir.
+- entregar uma solução que não use os serviços do `docker-compose.yml` como descrito nos requisitos;
+- não conseguir explicar a própria solução quando a organização pedir (veja a seção 11).
 
 Espera-se respeito entre todas as pessoas participantes, em Issues e comentários.
 
-## 12. Dúvidas e recursos
+## 13. Dúvidas e recursos
 
 - **Dúvidas:** abra uma Issue com o modelo **Dúvida**. As respostas ficam públicas para que todas as equipes tenham a mesma informação.
 - **Recursos:** até 25/10, 23h59, abra uma Issue com o modelo **Dúvida** e o título começando por `[RECURSO]`, explicando o que considera incorreto. A organização responde antes do resultado oficial.
 
-## 13. Disposições finais
+## 14. Disposições finais
 
 - Ao participar, a equipe declara ter lido e aceito este edital.
 - Este repositório e as soluções entregues são públicos; ao entregar, a equipe autoriza a organização a rodar e a divulgar o resultado da avaliação.

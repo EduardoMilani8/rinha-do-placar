@@ -5,7 +5,7 @@
 - Um repositório **público** com um `docker-compose.yml` na **raiz**.
 - A solução precisa subir apenas com `docker compose up`, sem passos manuais e sem depender de arquivos fora do repositório.
 - As imagens devem ser **públicas** ou construídas a partir do repositório (`build:`). Registros privados não são aceitos.
-- Inclua um `README.md` curto dizendo qual linguagem e quais tecnologias você usou. Isso ajuda na apresentação dos resultados.
+- Inclua um `README.md` curto dizendo qual linguagem e quais tecnologias você usou. Isso ajuda na apresentação dos resultados. Se usou IA, conte ali como (veja o [edital](../EDITAL.md#11-uso-de-inteligência-artificial)).
 
 Há um modelo pronto em [`exemplo-participante/`](../exemplo-participante).
 
