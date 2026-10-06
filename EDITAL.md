@@ -28,7 +28,7 @@ Todas as equipes implementam a mesma API: o **placar de uma maratona de programa
 | Data | O que acontece |
 |---|---|
 | 30/09/2026 (quarta) | Publicação deste edital e **abertura das inscrições** |
-| 16/10/2026 (sexta), 23h59 | **Fim das inscrições** |
+| 23/10/2026 (sexta), 23h59 | **Fim das inscrições** |
 | 25/10/2026 (domingo), 23h59 | **Fim do prazo de entrega** das soluções |
 | 26/10/2026 (segunda) | Avaliação das soluções pela organização |
 | 27/10/2026 (terça), 8h | **Resultado oficial**, apresentado ao vivo na abertura do Esquenta |
