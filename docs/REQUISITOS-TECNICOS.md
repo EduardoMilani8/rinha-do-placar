@@ -44,6 +44,15 @@ Declare os limites em cada serviço com `deploy.resources.limits` (`cpus` e `mem
 
 ## Ambiente de avaliação
 
-A avaliação roda em uma única máquina, uma solução por vez, sempre partindo de um ambiente limpo (`docker compose down -v` seguido de `docker compose up`). A configuração da máquina será informada em uma Issue antes do prazo de entrega.
+A avaliação roda em uma única máquina, uma solução por vez, sempre partindo de um ambiente limpo (`docker compose down -v` seguido de `docker compose up`). O executor dos testes roda na mesma máquina, cuja configuração é esta:
+
+| Item | Configuração |
+|---|---|
+| Máquina | Notebook Avell A52 HYB |
+| Processador | Intel Core i7-12650H (10 núcleos, 16 threads, até 4,7 GHz) |
+| Memória | 14 GB de RAM |
+| Armazenamento | SSD NVMe |
+| Sistema | Ubuntu 26.04 LTS |
+| Docker | 29.1.3, com Docker Compose 2.40.3 |
 
 Como a máquina de vocês será diferente da nossa, **compare seu resultado com o de outras soluções na mesma máquina, e não os números absolutos**.
