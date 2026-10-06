@@ -20,8 +20,8 @@ da sua solução. **Não há uma API aqui**: a API é o seu desafio.
 | Ajustar como o limite é dividido entre os serviços | Ter mais ou menos que duas instâncias da API |
 | Adicionar serviços (cache, fila...) dentro do limite | Renomear `api01` e `api02` |
 
-## Aviso
+## O que foi testado
 
-Este modelo só foi validado como YAML. Como o repositório não traz uma API, ele não foi
-executado de ponta a ponta com o Docker. Se algo não funcionar, abra uma Issue com o
-modelo "Dúvida".
+Este modelo foi executado com Docker, usando uma API de teste no lugar da sua: o `docker compose up` sobe, o balanceador responde na porta 9999, divide as requisições entre `api01` e `api02` e os limites declarados somam 1,5 CPU e 3000 MB. Derrubando a `api02` no meio das requisições, o balanceador continuou respondendo pela `api01` sem erros.
+
+Isso **não** valida a sua API. O `nginx.conf` já trata a queda de uma instância (`proxy_connect_timeout` e `proxy_next_upstream`); se trocar o balanceador, confira a etapa de falha. Se algo não funcionar, abra uma Issue com o modelo "Dúvida".
