@@ -1,6 +1,6 @@
 # Especificação da API
 
-A API atende na **porta 9999** (o balanceador), fala **JSON** e usa HTTP/1.1. Campos desconhecidos nos corpos das requisições são ignorados. O corpo das respostas de sucesso de escrita é livre, e os testes só olham o **status**.
+A API atende na **porta 9999** (o balanceador), fala **JSON** e usa HTTP/1.1. Campos desconhecidos nos corpos das requisições são ignorados. Um corpo ausente, que não seja JSON válido ou que não seja um objeto JSON devolve `422`, e `true`/`false` não valem como número. O corpo das respostas de sucesso de escrita é livre, e os testes só olham o **status**.
 
 ## Resumo
 
