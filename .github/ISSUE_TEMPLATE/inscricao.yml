@@ -18,7 +18,7 @@ body:
     id: integrantes
     attributes:
       label: Integrantes
-      description: Usuário do GitHub de cada integrante, um por linha (de 1 a 3 pessoas).
+      description: Usuário do GitHub de cada integrante, um por linha (de 1 a 4 pessoas).
       placeholder: "@usuario1\n@usuario2"
     validations:
       required: true

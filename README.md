@@ -7,7 +7,7 @@ Competição de back-end aberta, parte do **Esquenta**. Todas as equipes constro
 ## Comece por aqui
 
 1. Leia o [edital](EDITAL.md): regras, **cronograma**, inscrição, entrega e conduta.
-2. **Inscreva sua equipe** (de 1 a 3 pessoas) abrindo uma Issue com o modelo [Inscrição](https://github.com/EduardoMilani8/rinha-do-placar/issues/new/choose).
+2. **Inscreva sua equipe** (de 1 a 4 pessoas) abrindo uma Issue com o modelo [Inscrição](https://github.com/EduardoMilani8/rinha-do-placar/issues/new/choose).
 3. Estude a [regra de ranking](docs/REGRA-DE-RANKING.md) e a [especificação da API](docs/ESPECIFICACAO-API.md).
 4. Confira os [requisitos técnicos](docs/REQUISITOS-TECNICOS.md) e como a solução é [avaliada](docs/AVALIACAO.md).
 5. Escreva a sua API, em qualquer linguagem, e rode os [testes](testes/README.md) na sua máquina até tudo passar.

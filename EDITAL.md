@@ -4,6 +4,8 @@
 
 ## 1. Apresentação
 
+A Rinha do Placar é organizada pelo **IFSul**.
+
 A **Rinha do Placar** é uma competição de back-end aberta que integra o **Esquenta**, evento de abertura marcado para **27 de outubro de 2026**, às 8h.
 
 Todas as equipes implementam a mesma API: o **placar de uma maratona de programação** no estilo ICPC. Uma competição simulada envia submissões em rajada enquanto várias pessoas consultam o ranking, e a API precisa manter o placar **correto** e **rápido**. Os resultados são apresentados ao vivo na abertura do Esquenta.
@@ -17,7 +19,7 @@ Todas as equipes implementam a mesma API: o **placar de uma maratona de programa
 ## 3. Quem pode participar
 
 1. A participação é **gratuita** e aberta a qualquer pessoa.
-2. As equipes têm de **1 a 3 integrantes**.
+2. As equipes têm de **1 a 4 integrantes**.
 3. Cada pessoa pode participar de **uma única equipe**.
 4. Membros da organização podem ajudar com dúvidas, mas **não concorrem** ao ranking.
 
@@ -27,11 +29,10 @@ Todas as equipes implementam a mesma API: o **placar de uma maratona de programa
 |---|---|
 | 30/09/2026 (quarta) | Publicação deste edital e **abertura das inscrições** |
 | 16/10/2026 (sexta), 23h59 | **Fim das inscrições** |
-| 20/10/2026 (terça), 23h59 | **Fim do prazo de entrega** das soluções |
-| 21 a 24/10/2026 | Avaliação das soluções pela organização |
-| 24/10/2026 (sábado) | Divulgação do **resultado preliminar** neste repositório |
-| 25/10/2026 (domingo), 23h59 | Fim do prazo de **recursos** |
-| 27/10/2026 (terça), 8h | **Resultado oficial**, apresentado na abertura do Esquenta |
+| 25/10/2026 (domingo), 23h59 | **Fim do prazo de entrega** das soluções |
+| 26/10/2026 (segunda) | Avaliação das soluções pela organização |
+| 27/10/2026 (terça), 8h | **Resultado oficial**, apresentado ao vivo na abertura do Esquenta |
+| 28/10/2026 (quarta), 23h59 | Fim do prazo de **recursos** |
 
 Todos os horários seguem o fuso de Brasília. Qualquer alteração de data será avisada neste repositório, e a versão vigente do edital é a que está na branch `main`.
 
@@ -77,7 +78,7 @@ Só equipes com inscrição confirmada podem entregar.
 
 ## 10. Premiação
 
-A premiação será uma **lembrança do IFSul**. Quem a recebe será informado por aviso neste repositório **antes do fim das inscrições**. O ranking final será publicado no arquivo `RESULTADOS.md`.
+As **três primeiras equipes** do ranking recebem uma **lembrança do IFSul**. Em caso de empate nessas posições, a organização decide como distribuir as lembranças. O ranking final será publicado no arquivo `RESULTADOS.md`.
 
 ## 11. Uso de inteligência artificial
 
@@ -108,7 +109,7 @@ Espera-se respeito entre todas as pessoas participantes, em Issues e comentário
 ## 13. Dúvidas e recursos
 
 - **Dúvidas:** abra uma Issue com o modelo **Dúvida**. As respostas ficam públicas para que todas as equipes tenham a mesma informação.
-- **Recursos:** até 25/10, 23h59, abra uma Issue com o modelo **Dúvida** e o título começando por `[RECURSO]`, explicando o que considera incorreto. A organização responde antes do resultado oficial.
+- **Recursos:** depois do resultado oficial e até 28/10, 23h59, abra uma Issue com o modelo **Dúvida** e o título começando por `[RECURSO]`, explicando o que considera incorreto. A organização responde na própria Issue e, se houver erro, corrige o `RESULTADOS.md`.
 
 ## 14. Disposições finais
 
