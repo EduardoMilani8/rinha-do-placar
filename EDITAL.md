@@ -60,11 +60,15 @@ Linguagem, framework e banco de dados são livres. A solução é entregue como 
 
 ## 8. Avaliação
 
-A avaliação é automática e reproduzível, feita pelos mesmos testes públicos de [`testes/`](testes). As etapas e os critérios estão em [`docs/AVALIACAO.md`](docs/AVALIACAO.md). Só quem passa em todas as etapas entra no ranking, ordenado pela **latência p99** (menor é melhor). Assim, não vence quem é rápido, mas errado.
+A avaliação é automática e feita pela organização com **testes próprios, que não são divulgados**. Os testes públicos de [`testes/`](testes) servem para você validar a solução antes de entregar, mas passar neles não garante a aprovação. As etapas e os critérios estão em [`docs/AVALIACAO.md`](docs/AVALIACAO.md). Só quem passa em todas as etapas entra no ranking, ordenado pela **latência p99** (menor é melhor). Assim, não vence quem é rápido, mas errado.
+
+No dia do resultado oficial, a organização publica neste repositório os testes usados na avaliação e os resultados brutos de cada execução.
 
 Rode os testes na sua máquina antes de entregar, seguindo [`testes/README.md`](testes/README.md).
 
 ## 9. Entrega
+
+Só equipes com inscrição confirmada podem entregar.
 
 1. Deixe a solução em um repositório **público**.
 2. Abra uma Issue com o modelo **Entrega**, informando o link do repositório e o **hash do commit** avaliado.
@@ -73,7 +77,7 @@ Rode os testes na sua máquina antes de entregar, seguindo [`testes/README.md`](
 
 ## 10. Premiação
 
-A premiação será divulgada por aviso neste repositório **antes do fim das inscrições**. O ranking final será publicado no arquivo `RESULTADOS.md`.
+A premiação será uma **lembrança do IFSul**. Quem a recebe será informado por aviso neste repositório **antes do fim das inscrições**. O ranking final será publicado no arquivo `RESULTADOS.md`.
 
 ## 11. Uso de inteligência artificial
 

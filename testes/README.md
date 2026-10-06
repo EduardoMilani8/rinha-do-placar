@@ -1,5 +1,7 @@
 # Testes
 
+Estes testes são **públicos** para você validar a sua solução antes de entregar. Passar neles não garante a aprovação: a avaliação oficial, que define o ranking, usa testes próprios da organização, que não são divulgados.
+
 Tudo aqui usa apenas a biblioteca padrão do **Python 3.10 ou mais novo**. Não há nada para instalar.
 
 | Arquivo | Para que serve |
@@ -29,7 +31,7 @@ python3 testes/executar.py carga --limite-erros 0.05              # como na etap
 python3 testes/executar.py carga --saida resultado.json           # grava o resumo
 ```
 
-A semente padrão (42) é pública. A avaliação oficial usa uma semente secreta, então uma solução que só funcione para a 42 será reprovada.
+A semente padrão (42) é pública. A avaliação oficial usa testes e dados próprios da organização, então uma solução que só funcione para a 42 será reprovada.
 
 O código de saída é `0` se tudo passou e `1` se algo falhou. Se o executor não conseguir falar com a API, ele sai com `2`.
 

@@ -1,6 +1,6 @@
 # Como as soluções são avaliadas
 
-A avaliação é automática e usa o mesmo executor que você pode rodar: [`testes/executar.py`](../testes/executar.py). Todas as soluções passam pelo mesmo caminho, uma por vez, na mesma máquina.
+A avaliação é automática. Os testes públicos de [`testes/`](../testes) servem para você validar a solução antes de entregar. O ranking, porém, é definido por **testes próprios da organização, que não são divulgados**. Eles seguem a mesma [especificação](ESPECIFICACAO-API.md) e a mesma [regra de ranking](REGRA-DE-RANKING.md), então uma solução correta segundo esses documentos deve passar, mas passar nos testes públicos não garante a aprovação. Todas as soluções passam pelo mesmo caminho, uma por vez, na mesma máquina.
 
 ## Visão geral
 
@@ -19,7 +19,7 @@ Só entram no ranking as soluções **aprovadas em todas as etapas**. Quem for r
 
 ## Etapa 2: corretude (eliminatória)
 
-O executor roda os cenários de [`testes/cenarios/`](../testes/cenarios), que são **públicos e exatamente os mesmos** usados na avaliação. Antes de cada cenário ele chama `POST /admin/reset`. Um cenário passa apenas se todos os status HTTP e o placar (e o detalhe das equipes, quando o cenário pede) forem os esperados.
+A organização roda um conjunto oficial de cenários, que não é divulgado. Os cenários públicos de [`testes/cenarios/`](../testes/cenarios) são exemplos do tipo de verificação feita. Antes de cada cenário o executor chama `POST /admin/reset`. Um cenário passa apenas se todos os status HTTP e o placar (e o detalhe das equipes, quando o cenário pede) forem os esperados.
 
 Falhou em qualquer cenário: a solução é reprovada.
 
@@ -29,7 +29,7 @@ python3 testes/executar.py corretude
 
 ## Etapa 3: carga
 
-Uma competição simulada é gerada por [`testes/gerador.py`](../testes/gerador.py) a partir de uma **semente secreta**, revelada depois do resultado oficial. Os parâmetros oficiais são:
+A carga oficial é gerada pela organização, com dados que não são divulgados. O gerador público ([`testes/gerador.py`](../testes/gerador.py)) permite treinar com uma carga do mesmo tipo. Os parâmetros da carga pública são os abaixo, e a oficial pode usar valores diferentes:
 
 | Parâmetro | Valor |
 |---|---|
@@ -41,7 +41,7 @@ Uma competição simulada é gerada por [`testes/gerador.py`](../testes/gerador.
 | Tempo limite por requisição | 2 segundos |
 | Tentativas por requisição | até 3 (a API é idempotente) |
 
-Como a carga se desenrola:
+Na carga pública, a carga se desenrola assim:
 
 1. Cadastra as equipes.
 2. Envia as submissões **fora de ordem cronológica** (com desordem de até 30 minutos) e com duplicatas, enquanto 16 leitores consultam o placar sem parar.
@@ -79,9 +79,9 @@ O p99 global considera todas as requisições da carga: envios, rejulgamentos e 
 
 ## Boas práticas de justiça
 
-- A organização usa a mesma máquina, a mesma versão do Docker e o mesmo executor para todas as soluções, na versão marcada com a tag `avaliacao`.
+- A organização usa a mesma máquina, a mesma versão do Docker e os mesmos testes para todas as soluções.
 - O ambiente é reiniciado entre as soluções.
-- Os resultados brutos de cada execução são publicados junto com o resultado oficial.
+- Os resultados brutos de cada execução e os testes oficiais são publicados no dia do resultado oficial.
 
 ## Rode antes de entregar
 
