@@ -68,11 +68,11 @@ A carga é **aprovada** se todas estas condições valerem:
 python3 testes/executar.py carga --seed 42
 ```
 
-Cada solução roda a carga **5 vezes**, cada uma partindo de `POST /admin/reset`, e as 5 precisam ser aprovadas. O resultado de desempenho é a **mediana** das 3 execuções.
+Cada solução roda a carga **5 vezes**, cada uma partindo de `POST /admin/reset`, e as 5 precisam ser aprovadas. O resultado de desempenho é a **mediana** das 5 execuções.
 
 ## Etapa 5: falha
 
-Uma quarta execução da carga, com uma diferença: quando a fase de envios atinge cerca de metade, a organização derruba a instância `api02` (`docker compose kill api02`) e confere que ela realmente caiu. A solução precisa continuar atendendo pela `api01`, sem perder nenhum envio já confirmado, e o placar final precisa ser idêntico ao esperado.
+Uma execução adicional da carga, com uma diferença: quando a fase de envios atinge cerca de metade, a organização derruba a instância `api02` (`docker compose kill api02`) e confere que ela realmente caiu. A solução precisa continuar atendendo pela `api01`, sem perder nenhum envio já confirmado, e o placar final precisa ser idêntico ao esperado.
 
 Nesta etapa a taxa de falhas tolerada é de **5%**, por causa das requisições que estavam em andamento na instância derrubada. Como os envios são idempotentes, eles são reenviados (até 3 tentativas). Para simular localmente, use `--limite-erros 0.05`.
 
