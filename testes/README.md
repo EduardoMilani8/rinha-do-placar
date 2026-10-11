@@ -37,10 +37,11 @@ O código de saída é `0` se tudo passou e `1` se algo falhou. Se o executor n�
 
 ## Antes de entregar
 
-1. Suba a solução: `docker compose up --build`.
-2. `python3 testes/executar.py corretude`: todos os cenários devem passar.
-3. `python3 testes/executar.py carga`: com a semente pública 42, o resultado deve ser `APROVADO`.
-4. Simule a etapa de falha: rode a carga com `--limite-erros 0.05` e, no meio dela, derrube uma instância com `docker compose kill api02`. A solução precisa continuar respondendo e o placar final precisa continuar correto.
+1. Confira o seu `docker-compose.yml` contra as [regras do compose](../docs/REQUISITOS-TECNICOS.md#o-que-o-docker-composeyml-pode-ter): a organização verifica isso automaticamente antes de subir a solução.
+2. Suba a solução: `docker compose up --build`.
+3. `python3 testes/executar.py corretude`: todos os cenários devem passar.
+4. `python3 testes/executar.py carga`: com a semente pública 42, o resultado deve ser `APROVADO`.
+5. Simule a etapa de falha: rode a carga com `--limite-erros 0.05` e, no meio dela, derrube uma instância com `docker compose kill api02`. A solução precisa continuar respondendo e o placar final precisa continuar correto.
 
 ## Ver os dados gerados
 
