@@ -5,7 +5,7 @@ A avaliação é automática. Os testes públicos de [`testes/`](../testes) serv
 ## Visão geral
 
 ```
-Compose  →  Subida  →  Corretude  →  Carga (3 execuções)  →  Falha  →  Ranking
+Compose  →  Subida  →  Corretude  →  Carga (5 execuções)  →  Falha  →  Ranking
     └──────────────── qualquer reprovação elimina a solução ────────────────┘
 ```
 
@@ -68,7 +68,7 @@ A carga é **aprovada** se todas estas condições valerem:
 python3 testes/executar.py carga --seed 42
 ```
 
-Cada solução roda a carga **3 vezes**, cada uma partindo de `POST /admin/reset`, e as 3 precisam ser aprovadas. O resultado de desempenho é a **mediana** das 3 execuções.
+Cada solução roda a carga **5 vezes**, cada uma partindo de `POST /admin/reset`, e as 5 precisam ser aprovadas. O resultado de desempenho é a **mediana** das 3 execuções.
 
 ## Etapa 5: falha
 
@@ -80,7 +80,7 @@ Nesta etapa a taxa de falhas tolerada é de **5%**, por causa das requisições 
 
 Entre as soluções aprovadas em todas as etapas:
 
-1. menor **p99**, a latência abaixo da qual ficam 99% das operações, mediana das 3 execuções da carga, com **uma casa decimal** (em milissegundos);
+1. menor **p99**, a latência abaixo da qual ficam 99% das operações, mediana das 5 execuções da carga, com **uma casa decimal** (em milissegundos);
 2. em caso de empate, menor **p95**, calculado da mesma forma;
 3. persistindo o empate, as equipes dividem a posição.
 
@@ -89,7 +89,7 @@ O p99 considera todas as operações da carga: envios, rejulgamentos e leituras 
 ## Boas práticas de justiça
 
 - A organização usa a mesma máquina, a mesma versão do Docker e os mesmos testes para todas as soluções.
-- Antes de cada avaliação a máquina precisa estar ociosa, na tomada e fria, sem nenhum outro container rodando. A organização registra as condições de cada execução.
+- Antes de cada avaliação, e entre as execuções da carga, a máquina precisa estar ociosa, na tomada e fria (abaixo de 60 °C), sem nenhum outro container rodando. A organização registra as condições de cada execução.
 - O ambiente é limpo entre as soluções e entre as execuções.
 - Os resultados brutos de cada execução e os testes oficiais são publicados no dia do resultado oficial.
 
