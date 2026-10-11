@@ -46,7 +46,7 @@ Devolve **200** quando a API está pronta para receber requisições. O executor
 |---|---|
 | `id` | Texto de 1 a 64 caracteres. Identifica a submissão e garante a **idempotência** |
 | `equipe_id` | Texto de 1 a 64 caracteres |
-| `problema` | 1 ou 2 letras maiúsculas (`A` a `Z`) |
+| `problema` | 1 ou 2 letras maiúsculas (`A` a `Z`), sem espaços nem quebras de linha |
 | `minuto` | **Inteiro** de 0 a 300 (número decimal ou texto é inválido) |
 | `veredito` | `ACEITO`, `ERRADO`, `ERRO_COMPILACAO` ou `TEMPO_EXCEDIDO` |
 

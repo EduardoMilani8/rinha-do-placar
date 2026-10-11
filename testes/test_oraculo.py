@@ -56,6 +56,7 @@ class TestValidacao(unittest.TestCase):
             {"problema": "a"}, {"problema": "ABC"}, {"minuto": -1}, {"minuto": 301},
             {"minuto": 1.5}, {"minuto": "1"}, {"minuto": True}, {"veredito": "TALVEZ"},
             {"id": ""}, {"equipe_id": None},
+            {"problema": "A\n"}, {"problema": "\nA"}, {"problema": "A "},  # espaço ou quebra de linha não vale
         ]
         for alteracao in casos:
             with self.subTest(alteracao=alteracao):

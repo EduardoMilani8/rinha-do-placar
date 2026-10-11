@@ -13,7 +13,7 @@ VEREDITOS = ("ACEITO", "ERRADO", "ERRO_COMPILACAO", "TEMPO_EXCEDIDO")
 # Vereditos que contam como tentativa errada (geram penalidade).
 CONTAM_COMO_ERRO = ("ERRADO", "TEMPO_EXCEDIDO")
 
-_RE_PROBLEMA = re.compile(r"^[A-Z]{1,2}$")
+_RE_PROBLEMA = re.compile(r"[A-Z]{1,2}")
 _TAMANHO_MAX_TEXTO = 64
 
 
@@ -47,7 +47,7 @@ def validar_submissao(dados):
     if not _texto_valido(dados.get("equipe_id")):
         return "equipe_id deve ser um texto de 1 a 64 caracteres"
     problema = dados.get("problema")
-    if not isinstance(problema, str) or not _RE_PROBLEMA.match(problema):
+    if not isinstance(problema, str) or not _RE_PROBLEMA.fullmatch(problema):
         return "problema deve ter 1 ou 2 letras maiúsculas"
     minuto = dados.get("minuto")
     if isinstance(minuto, bool) or not isinstance(minuto, int):
