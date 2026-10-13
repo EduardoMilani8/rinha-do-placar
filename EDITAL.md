@@ -78,7 +78,10 @@ Só equipes com inscrição confirmada podem entregar.
 
 ## 10. Premiação
 
-As **três primeiras equipes** do ranking recebem uma **lembrança do IFSul**. Em caso de empate nessas posições, a organização decide como distribuir as lembranças. O ranking final será publicado no arquivo `RESULTADOS.md`.
+- As **três primeiras equipes** do ranking recebem um **certificado de posição** (1º, 2º ou 3º lugar).
+- A **primeira equipe** do ranking recebe, além do certificado, um **brinde do IFSul**.
+
+Em caso de empate nessas posições, a organização decide como distribuir o certificado e o brinde. O ranking final será publicado no arquivo `RESULTADOS.md`.
 
 ## 11. Uso de inteligência artificial
 
